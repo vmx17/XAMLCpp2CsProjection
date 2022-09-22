@@ -2,7 +2,7 @@
 
 #include "App.xaml.g.h"
 
-namespace winrt::CppConsumeApp::implementation
+namespace winrt::StubCpp::implementation
 {
     struct App : AppT<App>
     {

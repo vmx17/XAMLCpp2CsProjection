@@ -8,9 +8,6 @@
     <Filter Include="Generated Files">
       <UniqueIdentifier>{926ab91d-31b4-48c3-b9a4-e681349f27f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Themes">
-      <UniqueIdentifier>{bbb25ae1-bdb0-468c-b53e-f36dd7854665}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -21,15 +18,16 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="CppXAMLControlWRC.def" />
+    <Midl Include="Class.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CppXamlWRC.def" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Themes\Generic.xaml">
-      <Filter>Themes</Filter>
-    </Page>
+    <Page Include="Themes\Generic.xaml" />
   </ItemGroup>
 </Project>

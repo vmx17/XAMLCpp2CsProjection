@@ -1,11 +1,11 @@
 ﻿#pragma once
 #include "BgLabelControl.g.h"
 
-namespace winrt::CppXAMLControlWRC::implementation
+namespace winrt::CppXamlWRC::implementation
 {
     struct BgLabelControl : BgLabelControlT<BgLabelControl>
     {
-        BgLabelControl() { DefaultStyleKey(winrt::box_value(L"CppXAMLControlWRC.BgLabelControl")); }
+        BgLabelControl() { DefaultStyleKey(winrt::box_value(L"CppXamlWRC.BgLabelControl")); }
 
         winrt::hstring Label()
         {
@@ -26,7 +26,7 @@ namespace winrt::CppXAMLControlWRC::implementation
     };
 }
 
-namespace winrt::CppXAMLControlWRC::factory_implementation
+namespace winrt::CppXamlWRC::factory_implementation
 {
     struct BgLabelControl : BgLabelControlT<BgLabelControl, implementation::BgLabelControl>
     {

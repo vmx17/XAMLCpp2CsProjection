@@ -1,5 +1,5 @@
 ========================================================================
-    CppXAMLControlWRC Project Overview
+    CppXamlWRC Project Overview
 ========================================================================
 
 This project demonstrates how to get started authoring Windows Runtime

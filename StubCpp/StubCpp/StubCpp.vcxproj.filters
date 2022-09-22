@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">
-      <UniqueIdentifier>{4e969f94-a590-4306-be78-3fd267ea351e}</UniqueIdentifier>
+      <UniqueIdentifier>{620873f1-ed24-47f3-8519-2aef9a1038cd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -56,8 +56,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>

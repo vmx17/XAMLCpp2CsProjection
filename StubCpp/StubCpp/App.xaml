@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="CppConsumeApp.App"
+    x:Class="StubCpp.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:CppConsumeApp">
+    xmlns:local="using:StubCpp">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
