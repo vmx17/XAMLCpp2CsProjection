@@ -1,6 +1,5 @@
 ﻿namespace CppXAMLControlWRC
 {
-    [default_interface]
     runtimeclass BgLabelControl : Microsoft.UI.Xaml.Controls.Control
     {
         BgLabelControl();

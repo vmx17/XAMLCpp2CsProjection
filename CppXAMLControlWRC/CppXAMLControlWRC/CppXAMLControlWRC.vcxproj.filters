@@ -21,9 +21,6 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Class.idl" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="CppXAMLControlWRC.def" />
     <None Include="packages.config" />
   </ItemGroup>
