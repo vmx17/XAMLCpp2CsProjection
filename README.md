@@ -4,7 +4,7 @@ This is a simple program to refer XAML custom control in Windows Runtime Conpone
 
 Currently, this does NOT work.
 
-This repository was made to "Ask Microsoft Q&A" but I'd like to get any help from many persons.
+This repository was made to "Ask Question" in [Microsoft Q&A](https://learn.microsoft.com/en-us/answers/questions/1019298/how-can-i-use-xaml-custom-control-in-windows-runti.html) but I'd like to get any help from many persons.
 
 Previously I've made ["NetProjection" repository](https://github.com/vmx17/NetProjection) but it became a little complicated. So I re-make this repository to build simpler samples.
 
@@ -43,6 +43,8 @@ Currently no C# items are provided.
 
 ## Status
 
+- 09/22/2022
+  Now I'm checking App.xaml of stub project. Modification seems to make some difference but same as before. 
 - 09/22/2022
   Reference by project(*.winmd). Build fails at C++ stub. The output is;
   ```

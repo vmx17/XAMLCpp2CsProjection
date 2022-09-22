@@ -170,7 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CppXamlWRC">
-      <HintPath>..\..\CppXamlWRC\x64\Release\CppXamlWRC\CppXamlWRC.winmd</HintPath>
+      <HintPath>..\..\_build\x64\Release\CppXamlWRC\bin\CppXamlWRC\CppXamlWRC.winmd</HintPath>
       <IsWinMDFile>true</IsWinMDFile>
     </Reference>
   </ItemGroup>

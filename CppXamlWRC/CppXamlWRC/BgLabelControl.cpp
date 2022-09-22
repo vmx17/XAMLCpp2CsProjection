@@ -1,5 +1,5 @@
 ﻿#include "pch.h"
-#include "BgLabelControl.h"
+//#include "BgLabelControl.h"
 #if __has_include("BgLabelControl.g.cpp")
 #include "BgLabelControl.g.cpp"
 #endif
