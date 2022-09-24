@@ -1,6 +1,6 @@
-# How can I use XAML custom control in Windows Runtime Conponent?
+# How can I use XAML custom control in Windows Runtime Component?
 
-This is a simple program to refer XAML custom control in Windows Runtime Conponent.
+This is a simple program to refer XAML custom control in Windows Runtime Component.
 
 Currently, this does NOT work.
 
@@ -10,7 +10,7 @@ Previously I've made ["NetProjection" repository](https://github.com/vmx17/NetPr
 
 ## Motivation
 
-Get performance with C++ and productivity with C#! Yeah, it's a Microsoft recommended way, but hard.
+Get performance with C++ and productivity with C#! Yeah, it's a Microsoft recommended way, but hard way especially for enterprise application.
 
 I intended to make modern desktop application in C# but use DirectX in C++.
 
@@ -27,8 +27,8 @@ I'd like to go in two steps below.
 1. make library in C++/WinRT and make stub also in C++/WinRT.
 2. make library in C++/WinRT and make stub in C#.
 
-Now I'm in step 1.<br>
-Between step 1 and 2, there might be a .Net 6's restriction, that we must make NuGet package. It also a hard way for debugging.
+Now I'm in step 2.<br>
+Between step 1 and 2, there might be a .Net 6's restriction, that we must make NuGet package. Using NuGet package is also a hard way for debugging.
 
 I'll use Microsoft's example _"BgLabelControl"_ as XAML control.
 I would like to make the library as independent solution.
@@ -36,12 +36,22 @@ I would like to make the library as independent solution.
 
 ## File structure
 
-- Solution: "CppXamlWRC": contains the _"BgLabelControl"_.
+- Solution: "CppXamlWRC": contains two projects.
+  - "CppXamlWRC": An WRC project which include famous XAML custom control _"BgLabelControl"_.
+  - "WRC2CsProjection": A projection project of "CppXamlWRC" to C# that makes NuGet package named as "CppXamlWRC.0.1.0-prerelease.nupkg". (The version number may vary.)
 - Solution: "StubCpp": contains C++/WinRT stub to use the library.
+- Solution: "StubCs": contains C#/WinRT stub to use the library.
+
+The build directory "_build" is made at just under top directory.
 
 Currently no C# items are provided.
 
 ## Status
+
+- 09/24/2022
+  fix C++(App) - C++(WRC) reference issue and can build/run without errors. "Pch.h" and "App.xaml" were the key.
+  Add WRC projection project from C++ to C#. Add C# stub, "StubCs".
+  I could build both of WRC and App, but fails to refer component from C# app at runtime. To compile the C# app, I use *.nuget. It makes me remove Resource Directroy from App.xaml to build without errors. So I feel something wrong around referring settings.
 
 - 09/22/2022
   Now I'm checking App.xaml of stub project. Modification seems to make some difference but same as before. 
@@ -52,12 +62,12 @@ Currently no C# items are provided.
   1>D:\Source\GitHub\XAMLCpp2CsProjection\StubCpp\StubCpp\Generated Files\XamlTypeInfo.g.cpp(179,28): error C2039: 'CppXamlWRC': is not a member of 'winrt'
   ```
 
-## Error reproduction
+## Reproducing Error
 - Open _CppXamlWRC\CppXamlWRC.sln_
 - Restore NuGet packages.
-- bbuild the solution in x64/release or x64/debug.
+- build the solution in x64/release or x64/debug.
 - Close the solution.
-- Open _StubCpp\StubCpp.sln_
+- Open _StubCs\StubCs.sln_
 - Restore NuGet packages.
 - build the solution in the same condition of _CppXamlWRC_.
 
@@ -66,3 +76,6 @@ I think these solutions can be unified... Sorry for inconvenience.
 ## Reference
 
 - [Build XAML controls with C++/WinRT](https://docs.microsoft.com/en-us/windows/apps/winui/winui3/xaml-templated-controls-cppwinrt-winui-3)
+- [Generate a C# projection from a C++/WinRT component, distribute as a NuGet for .NET apps](https://learn.microsoft.com/en-us/windows/apps/develop/platform/csharp-winrt/net-projection-from-cppwinrt-component)
+- [Walkthrough—Create a C#/WinRT component, and consume it from C++/WinRT](https://learn.microsoft.com/en-us/windows/apps/develop/platform/csharp-winrt/create-windows-runtime-component-cswinrt)
+- [Walkthrough—Create a C# component with WinUI 3 controls, and consume it from a C++/WinRT app that uses the Windows App SDK](https://learn.microsoft.com/en-us/windows/apps/develop/platform/csharp-winrt/create-winrt-component-winui-cswinrt)

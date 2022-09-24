@@ -25,3 +25,4 @@
 #include <wil/cppwinrt_helpers.h>
 
 //#include "../../../CppXamlWRC/CppXamlWRC/BgLabelControl.h"
+#include <winrt/CppXamlWRC.h>

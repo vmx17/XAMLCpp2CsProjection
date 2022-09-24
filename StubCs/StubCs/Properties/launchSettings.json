@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "StubCs (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "StubCs (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

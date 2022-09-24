@@ -8,12 +8,12 @@
 
   <Identity
     Name="83b6b6bc-72d0-4eba-bfa7-db760f1f4643"
-    Publisher="CN=355yamada"
+    Publisher="CN=v2"
     Version="1.0.0.0" />
 
   <Properties>
     <DisplayName>StubCpp</DisplayName>
-    <PublisherDisplayName>355yamada</PublisherDisplayName>
+    <PublisherDisplayName>Volker Veidt</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -25,7 +25,9 @@
   <Resources>
     <Resource Language="x-generate"/>
   </Resources>
-
+	
+	<!--In order to host the C# component from C++, you must add the following Extension group and list the activatable classes-->
+	
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
