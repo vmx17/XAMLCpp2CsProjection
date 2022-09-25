@@ -65,11 +65,11 @@ Currently no C# items are provided.
 ## Reproducing Error
 - Open _CppXamlWRC\CppXamlWRC.sln_
 - Restore NuGet packages.
-- build the solution in x64/release or x64/debug.
+- build the solution in x64/release.
 - Close the solution.
 - Open _StubCs\StubCs.sln_
 - Restore NuGet packages.
-- build the solution in the same condition of _CppXamlWRC_.
+- build the solution in in x64/release or x64/debug.
 
 I think these solutions can be unified... Sorry for inconvenience.
 
