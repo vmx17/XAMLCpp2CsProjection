@@ -49,13 +49,12 @@ Currently no C# items are provided.
 ## Status
 
 - 09/24/2022
-  fix C++(App) - C++(WRC) reference issue and can build/run without errors. "Pch.h" and "App.xaml" were the key.
-  Add WRC projection project from C++ to C#. Add C# stub, "StubCs".
-  If the property "Height" and "Width" specified, there seems a blank. So it could refer something but default form/color/text is not shown correctly.
-
-- 09/22/2022
+  - fix C++(App) - C++(WRC) reference issue and can build/run without errors. "Pch.h" and "App.xaml" were the key.
+  - Add WRC projection project from C++ to C#. Add C# stub, "StubCs".
+  - If the property "Height" and "Width" specified, there seems a blank. So it could refer something but default form/color/text is not shown correctly.
+- 09/22/2022<br>
   Now I'm checking App.xaml of stub project. Modification seems to make some difference but same as before. 
-- 09/22/2022
+- 09/22/2022<br>
   Reference by project(*.winmd). Build fails at C++ stub. The output is;
   ```
   1>XamlTypeInfo.g.cpp 

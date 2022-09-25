@@ -19,6 +19,7 @@
 		<NuspecFile>$(GeneratedNugetDir)CppXamlWRC.nuspec</NuspecFile>
 		<OutputPath>$(GeneratedNugetDir)</OutputPath>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.0.0" />
