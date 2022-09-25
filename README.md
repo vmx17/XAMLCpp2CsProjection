@@ -2,7 +2,7 @@
 
 This is a simple program to refer XAML custom control in Windows Runtime Component.
 
-Currently, this does NOT work.
+Currently, only C++ stub works, C# stub show something but just a blank.
 
 This repository was made to "Ask Question" in [Microsoft Q&A](https://learn.microsoft.com/en-us/answers/questions/1019298/how-can-i-use-xaml-custom-control-in-windows-runti.html) but I'd like to get any help from many persons.
 
@@ -51,7 +51,7 @@ Currently no C# items are provided.
 - 09/24/2022
   fix C++(App) - C++(WRC) reference issue and can build/run without errors. "Pch.h" and "App.xaml" were the key.
   Add WRC projection project from C++ to C#. Add C# stub, "StubCs".
-  I could build both of WRC and App, but fails to refer component from C# app at runtime. To compile the C# app, I use *.nuget. It makes me remove Resource Directroy from App.xaml to build without errors. So I feel something wrong around referring settings.
+  If the property "Height" and "Width" specified, there seems a blank. So it could refer something but default form/color/text is not shown correctly.
 
 - 09/22/2022
   Now I'm checking App.xaml of stub project. Modification seems to make some difference but same as before. 
